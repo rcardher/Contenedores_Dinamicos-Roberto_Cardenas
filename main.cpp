@@ -14,6 +14,20 @@
 #include <memory>
 #include <boost/lexical_cast.hpp>
 #include "ejercicio 2/List.h"
+#include "ejercicio 3/Algoritmos.h"
+
+// Declaración de funciones
+void ejercicio1();
+void ejercicio2();
+
+int main() {
+    // Ejecutar los ejercicios
+    ejercicio1();
+    ejercicio2();
+    ejecutarEjercicio3();
+
+    return 0;
+}
 
 // Ejercicio 1: Vector e Iteradores
 void ejercicio1() {
@@ -39,13 +53,6 @@ void ejercicio2() {
     }
 }
 
-int main() {
-    // Ejecutar los ejercicios
-    ejercicio1();
-    ejercicio2();
-
-    return 0;
-}
 
 
 

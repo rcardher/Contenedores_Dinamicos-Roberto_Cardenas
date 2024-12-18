@@ -14,6 +14,8 @@ add_executable(Contenedores_Dinamicos_Roberto_Cardenas
         main.cpp
         "ejercicio 2/List.h"
         "ejercicio 2/List.cpp"
+        "ejercicio 3/Algoritmos.h"
+        "ejercicio 3/Algoritmos.cpp"
 )
 
 # Vincula las bibliotecas de Boost si es necesario (aquí probablemente no sea obligatorio)
