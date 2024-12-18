@@ -10,6 +10,8 @@
 #include <algorithm>
 #include <valarray>
 #include <memory>
+#include "ejercicio 6/Boost.h"
+
 
 // Ejercicio 1: Vector e Iteradores
 void ejercicio1() {
@@ -102,8 +104,13 @@ int main() {
     std::cout << "\nEjercicio 5: C++ Moderno" << std::endl;
     ejercicio5();
 
+    // Ejercicio 6
+    std::cout << "\nEjercicio 6: Introducción a Boost" << std::endl;
+    ejercicio6();
+
     return 0;
 }
+
 
 
 

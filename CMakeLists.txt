@@ -3,11 +3,13 @@ project(Contenedores_Dinamicos_Roberto_Cardenas)
 
 set(CMAKE_CXX_STANDARD 14)
 
-# Busca Boost explícitamente en caso de que CMake no lo encuentre automáticamente
-set(BOOST_ROOT "/usr/local/opt/boost") # Ajusta esta ruta si es diferente en tu sistema
+# Ajustamos la ruta de Boost con la salida del comando `brew --prefix boost`
+set(BOOST_ROOT "/usr/local/opt/boost")
+
+# Buscamos Boost sin componentes específicos, porque lexical_cast es header-only
 find_package(Boost REQUIRED)
 
-# Agrega los directorios de inclusión de Boost
+# Agregamos los directorios de inclusión de Boost
 include_directories(${Boost_INCLUDE_DIRS})
 
 add_executable(Contenedores_Dinamicos_Roberto_Cardenas
@@ -18,8 +20,15 @@ add_executable(Contenedores_Dinamicos_Roberto_Cardenas
         "ejercicio 3/Algoritmos.cpp"
         "ejercicio 4/Operaciones.cpp"
         "ejercicio 5/Moderno.cpp"
+        "ejercicio 6/Boost.h"
+        "ejercicio 6/Boost.cpp"
 )
 
-# Vincula las bibliotecas de Boost si es necesario (aquí probablemente no sea obligatorio)
-# target_link_libraries(Contenedores_Dinamicos_Roberto_Cardenas Boost::Boost)
+# No es necesario vincular Boost::lexical_cast, ya que es header-only
+target_link_libraries(Contenedores_Dinamicos_Roberto_Cardenas)
+
+
+
+
+
 
